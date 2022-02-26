@@ -121,7 +121,10 @@ function displayAnimeDetails(details){
 
 // Display all theme songs by traversing through the "openings" and "endings" arrays
 function displayThemeDetails(details){
+    console.log(details.data.openings.length);
+    if(details.data.openings.length != 0){
     information.innerHTML += `<h3 class = "anime-heading">Openings</h3>`;
+    }
     let i = 0;
     while(i < details.data.openings.length){
         information.innerHTML += `
@@ -129,8 +132,10 @@ function displayThemeDetails(details){
         `;
         i++;
     }
-
+    
+    if(details.data.endings.length != 0){
     information.innerHTML += `<h3 class = "anime-heading">Endings</h3>`;
+    }
     let j = 0;
     while(j < details.data.openings.length){
         information.innerHTML += `

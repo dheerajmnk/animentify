@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --primary-color: #FF6263;
+	--secondary-color: #292929;
+	--extra-dark-color: #171717;
+	--dark-color: #1d1d1d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+img:not(.logo-pic){
+    width: 100%;
+    display: block;
+}
+
+.container{
+    min-height: 100vh;
+    background-color: var(--extra-dark-color);
+}
+
+.container .box{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo{
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 1rem 0;
+}
+
+.header{
+    background-color: var(--dark-color);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbox{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.searchbox h3{
+    color: #fff;
+    align-self: center;
+    margin-right: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.searchbox .search-field{
+    color: var(--secondary-color);
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    width: 350px;
+}
+
+.anime-search{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    z-index: 10;
+}
+
+.search-list{
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+    border-bottom: 1px var(--dark-color);
+    width: calc(350px - 8px);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+    display: flex;
+    align-items: center;
+}
+
+.search-list:hover{
+    background-color: #1f1f1f;
+}
+
+.thumbnail img{
+    width: 40px;
+    margin-right: 1rem;
+}
+
+.search-info h3{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.search-info p{
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.anime-search::-webkit-scrollbar{
+    width: 8px;
+}
+
+.anime-search::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.anime-search::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+    outline: none;
+    border-radius: 10px;
+}
+
+.hide-anime-search{
+    display: none;
+}
+
+.result-box{
+    padding: 3rem 0;
+}
+
+.anime-picture img{
+    max-width: 300px;
+    margin: 0 auto;
+    border: 4px solid #fff;
+}
+
+.information{
+    color: #fff;
+    padding-top: 3rem;
+}
+
+.information p{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+} 
+
+.title{
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+span{
+    color: var(--primary-color);
+    margin-right: 0.1rem;
+}
+
+
+.anime-data{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.episodes{
+    display: inline-block;
+}
+
+.duration{
+    display: inline-block;
+}
+
+li:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.anime-heading{
+    color: var(--primary-color);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.anime-trailer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    background-color: var(--primary-color);
+    margin: 1rem 0;
+    padding: 1rem 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+.button span{
+    color: #fff;
+    font-size: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+@media(max-width: 450px){
+    .search-field{
+        width: 90%;
+        margin: 0 auto;
+        padding: 0.5rem 1rem;
+    }
+
+    .searchbox h3{
+        font-size: 1.4rem;
+    }
+
+    .anime-search{
+        width: 90%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .search-list{
+        width: 100%;
+    }
+
+    .anime-data{
+        flex-direction: column;
+    }
+
+    .anime-data li:nth-child(2){
+        margin: 0.8rem 0;
+    }
+}
+
+@media(min-width: 850px){
+    .searchbox{
+        flex-direction: row;
+    }
+
+    .searchbox h3{
+        margin-bottom: 0;
+    }
+
+    .result-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .information{
+        color: #fff;
+
+    }
+
+    .title{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding: 0;
+        text-align: left;
+    }
+
+    .anime-picture{
+        margin-bottom: 1rem;
+    }
+}

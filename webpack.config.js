@@ -16,6 +16,17 @@ module.exports = {
             {
                 test: /\.(js)$/,
                 use: "babel-loader",
+            },
+            {
+                test: /\.(jpeg|png|jpg|svg|gif)$/i,
+                loader: "file-loader",
+                options: {
+                    name: '[name].[hash:6].[ext]',
+                    outputPath: 'img',
+                    publicPath: 'img',
+                    emitFile: true,
+                    esModule: false
+                }
             }
         ],
     },
@@ -23,6 +34,9 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
     },
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [new HtmlWebpackPlugin({
+        template: 'src/indexref.html'
+    }),
+],
     mode: process.env.NODE_ENV === "production" ? "production" : "development"
 };

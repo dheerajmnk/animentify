@@ -180,6 +180,7 @@ span{
 
 .duration{
     display: inline-block;
+    margin: 0px 0px 5px;
 }
 
 li:not(:last-child){
@@ -247,10 +248,6 @@ li:not(:last-child){
 
     .anime-data{
         flex-direction: column;
-    }
-
-    .anime-data li:nth-child(2){
-        margin: 0.8rem 0;
     }
 }
 

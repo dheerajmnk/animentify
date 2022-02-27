@@ -121,7 +121,6 @@ function displayAnimeDetails(details){
 
 // Display all theme songs by traversing through the "openings" and "endings" arrays
 function displayThemeDetails(details){
-    console.log(details.data.openings.length);
     if(details.data.openings.length != 0){
     information.innerHTML += `<h3 class = "anime-heading">Openings</h3>`;
     }

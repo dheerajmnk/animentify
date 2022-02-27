@@ -214,7 +214,17 @@ li:not(:last-child){
     padding: 1rem;
 }
 
-@media(max-width: 450px){
+@media(max-width: 620px){
+    html,body{
+        overflow-x: hidden;
+    }
+
+    .logo img{
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+
     .search-field{
         width: 90%;
         margin: 0 auto;

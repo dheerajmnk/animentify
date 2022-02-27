@@ -136,7 +136,7 @@ function displayThemeDetails(details){
     information.innerHTML += `<h3 class = "anime-heading">Endings</h3>`;
     }
     let j = 0;
-    while(j < details.data.openings.length){
+    while(j < details.data.endings.length){
         information.innerHTML += `
         <p class = "endings">${details.data.endings[j]}</p>
         `;

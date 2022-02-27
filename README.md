@@ -34,7 +34,7 @@ npm install
 3. Run the following command in the terminal for initializing the development server.
 
 ```bash
-npm run install
+npm run start
 ```
 
 

@@ -17,7 +17,7 @@ Animentify uses Jikan V4 API to fetch all information. Jikan is an open-source R
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `integer` | ID of Anime to fetch (Same ID as MyAnimeList)|
 
-## Screenshots
+## Screenshot
 
 ![Screenshot](./screenshot.JPG)
 
@@ -34,7 +34,7 @@ npm install
 3. Run the following command in the terminal for initializing the development server.
 
 ```bash
-npm run install
+npm run start
 ```
 
 

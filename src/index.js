@@ -91,6 +91,9 @@ function getGenres(details){
 
 // Display all anime details to the user
 function displayAnimeDetails(details){
+    // Change title of the page to name of the anime
+    document.title = details.data.title;
+    
     information.innerHTML = `
             <div class = "result-grid">
                     <div class = "anime-picture">

@@ -17,9 +17,12 @@ Animentify uses Jikan V4 API to fetch all information. Jikan is an open-source R
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `integer` | ID of Anime to fetch (Same ID as MyAnimeList)|
 
-## Screenshot
+## Screenshots
 
 ![Screenshot](./screenshot.JPG)
+
+![Result](./Result.PNG)
+
 
 ## Installation
 

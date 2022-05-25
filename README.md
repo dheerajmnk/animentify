@@ -21,7 +21,7 @@ Animentify uses Jikan V4 API to fetch all information. Jikan is an open-source R
 
 ![Screenshot](./screenshot.JPG)
 
-![Result](./Result.PNG)
+![Result](./Result.png)
 
 
 ## Installation
